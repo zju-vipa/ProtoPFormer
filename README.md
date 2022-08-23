@@ -1,8 +1,19 @@
 # ProtoPFormer
 
-## Data
+## Introduction
+
+This is the official implementation of paper **"ProtoPFormer: Concentrating on Prototypical Parts in Vision Transformers for
+Interpretable Image Recognition"**. Please refer to **[Arxiv](https://arxiv.org/abs/2208.10431)** for more details.
+
+The overview of ProtoPFormer is as below:
+
+![img](./imgs/method.svg)
+
+## Dataset
 The CUB dataset is downloaded from `https://www.vision.caltech.edu/datasets/cub_200_2011/`.
+
 The Stanford Dogs dataset is downloaded from `http://vision.stanford.edu/aditya86/ImageNetDogs/`.
+
 The Stanford Cars dataset is downloaded from `http://ai.stanford.edu/~jkrause/cars/car_dataset.html`.
 
 Decompress them and place them in the `datasets/` folder as follows:
@@ -75,9 +86,12 @@ sh scripts/visualize.sh $backbone $data_set $output_dir $use_gauss $modeldir $mo
 An example for visualizing a ProtoPFormer of backbone `deit_tiny_patch16_224` on CUB with a checkpoint file `output_cosine/CUB2011U/deit_tiny_patch16_224/1028--adamw-0.05-200-protopformer/checkpoints/epoch-best.pth` is as below:
 
 ```
-sh scripts/visualize.sh deit_tiny_patch16_224 CUB2011U output_view False \
+sh scripts/visualize.sh deit_tiny_patch16_224 \
+CUB2011U \
+output_view \
+False \
 output_cosine/CUB2011U/deit_tiny_patch16_224/1028--adamw-0.05-200-protopformer/checkpoints \
 epoch-best.pth
 ```
 
-Noted that $use_gauss denotes whether visualizing gaussian shape, it will be much slower if $use_gauss is True.
+Noted that `$use_gauss` denotes whether visualizing gaussian shape, it will be much slower if `$use_gauss` is True.
