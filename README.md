@@ -3,7 +3,7 @@
 ## Introduction
 
 This is the official implementation of paper **"ProtoPFormer: Concentrating on Prototypical Parts in Vision Transformers for
-Interpretable Image Recognition"**. Please refer to **[Arxiv](https://arxiv.org/abs/2208.10431)** for more details.
+Interpretable Image Recognition"**. [**[Paper](https://arxiv.org/abs/2208.10431)**]
 
 The overview of ProtoPFormer is as below:
 
