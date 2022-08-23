@@ -9,6 +9,10 @@ The overview of ProtoPFormer is as below:
 
 ![img](./imgs/method.svg)
 
+## Updates
+
+* **08/23/2022** Code has been uploaded.
+
 ## Dataset
 The CUB dataset is downloaded from `https://www.vision.caltech.edu/datasets/cub_200_2011/`.
 
@@ -35,27 +39,28 @@ datasets
     |...
 ```
 
-## Required Packages
+## Usage
 
+First clone the repository locally:
+
+```
+git clone git@github.com:zju-vipa/ProtoPFormer.git
+```
+
+Then install the requried packages as below:
+
+```
 pytorch==1.8.1
-
 torchvision==0.9.1
-
 pillow==9.1.1
-
 timm==0.5.4
-
 opencv-python==4.6.0.66
-
 tensorboard==2.9.1
-
 scipy==1.8.1
-
 pandas==1.4.3
-
 matplotlib==3.5.2
-
 scikit-learn==1.1.1
+```
 
 Newer versions of these packages may work.
 
