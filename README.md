@@ -100,3 +100,7 @@ epoch-best.pth
 ```
 
 Noted that `$use_gauss` denotes whether visualizing gaussian shape, it will be much slower if `$use_gauss` is True.
+
+## Statement
+
+This project is for research purpose only. For any other questions please contact `mqxue@zju.edu.cn`.
