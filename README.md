@@ -11,6 +11,7 @@ The overview of ProtoPFormer is as below:
 
 ## Updates
 
+* **08/29/2022** The citation of our paper has been added.
 * **08/23/2022** Code has been uploaded.
 
 ## Dataset
