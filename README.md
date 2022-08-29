@@ -74,7 +74,7 @@ The format instruction of training is as below:
 sh scripts/train_cub.sh $backbone $batch_size $num_gpus
 ```
 
-Here, $backbone is chosen from [`deit_tiny_patch16_224`, `deit_small_patch16_224`, `cait_xxs24_224`], $batch_size denotes batch size, and $num_gpus denotes the number of gpus for training. An example for training a ProtoPFormer of backbone `deit_tiny_patch16_224` on CUB with batch size 64 and 2 gpus is as below:
+Here, `$backbone` is chosen from [`deit_tiny_patch16_224`, `deit_small_patch16_224`, `cait_xxs24_224`], `$batch_size` denotes batch size, and `$num_gpus` denotes the number of gpus for training. An example for training a ProtoPFormer of backbone `deit_tiny_patch16_224` on CUB with batch size 64 and 2 gpus is as below:
 
 ```
 sh scripts/train_cub.sh deit_tiny_patch16_224 64 2
@@ -100,6 +100,19 @@ epoch-best.pth
 ```
 
 Noted that `$use_gauss` denotes whether visualizing gaussian shape, it will be much slower if `$use_gauss` is True.
+
+## Citation
+If you find our code is helpful for your research, please cite:
+
+```
+@article{xue2022protopformer,
+  title={ProtoPFormer: Concentrating on Prototypical Parts in Vision Transformers for Interpretable Image Recognition},
+  author={Xue, Mengqi and Huang, Qihan and Zhang, Haofei and Cheng, Lechao and Song, Jie and Wu, Minghui and Song, Mingli},
+  journal={arXiv preprint arXiv:2208.10431},
+  year={2022}
+}
+```
+
 
 ## Statement
 
