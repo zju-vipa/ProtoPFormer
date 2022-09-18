@@ -15,7 +15,6 @@ from torch.utils.tensorboard import SummaryWriter
 
 from pathlib import Path
 
-import torchvision
 from timm.data import Mixup
 from timm.models import create_model
 from timm.loss import LabelSmoothingCrossEntropy, SoftTargetCrossEntropy
@@ -237,30 +236,6 @@ def get_outlog(args):
     )
 
     return tb_writer, logger
-
-
-def get_model(args, model_name):
-    if model_name in ["ResNet50", "ResNet101", "ResNet18", "Vgg16"]:
-        if model_name == "ResNet50":
-            model = torchvision.models.resnet50(pretrained=False, num_classes=args.nb_classes)
-        elif model_name == "ResNet101":
-            model = torchvision.models.resnet101(pretrained=False, num_classes=args.nb_classes)
-        elif model_name == "ResNet18":
-            model = torchvision.models.resnet18(pretrained=False, num_classes=args.nb_classes)
-        elif model_name == "Vgg16":
-            model = torchvision.models.vgg16(pretrained=False, num_classes=args.nb_classes)
-
-    else:
-        # if not args.w_dis_token:
-        model = create_model(
-            model_name,
-            pretrained=False,
-            num_classes=args.nb_classes,
-            drop_rate=args.drop,
-            drop_path_rate=args.drop_path,
-            drop_block_rate=None,
-        )
-    return model
 
 
 def set_seed(seed):
