@@ -1,6 +1,3 @@
-from lib2to3.pgen2 import token
-from turtle import distance
-from sklearn.inspection import permutation_importance
 import torch
 import random
 import torch.utils.data
@@ -13,16 +10,11 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-import re
-
 import os
-import pickle
-
 from matplotlib import cm
 import protopformer
 
-from tools.preprocess import preprocess_input_function
-from tools.datasets import build_dataset, build_dataset_noaug, build_dataset_view
+from tools.datasets import build_dataset_noaug, build_dataset_view
 from tools.utils import str2bool
 
 import argparse
@@ -287,7 +279,7 @@ ppnet = protopformer.construct_PPNet(base_architecture=args.base_architecture,
                                 use_global=args.use_global,
                                 use_ppc_loss=args.use_ppc_loss,
                                 global_coe=args.global_coe,
-                                global_proto_per_class=args.global_proto_per_class,   # delete
+                                global_proto_per_class=args.global_proto_per_class,
                                 prototype_activation_function=args.prototype_activation_function,
                                 add_on_layers_type=args.add_on_layers_type)
 

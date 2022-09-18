@@ -23,7 +23,6 @@ from tools.create_optimizer import create_optimizer
 from tools.create_scheduler import create_scheduler
 
 from timm.utils import NativeScaler, get_state_dict, ModelEma
-from torch.hub import load_state_dict_from_url
 
 import tools.utils as utils
 import protopformer
@@ -44,7 +43,7 @@ def get_args_parser():
     parser.add_argument('--w_dis_token', type=bool, default=False)
 
     # ProtoPFormer
-    parser.add_argument('--base_architecture', type=str, default='vgg16')
+    parser.add_argument('--base_architecture', type=str, default='deit_tiny_patch16_224')
     parser.add_argument('--img_size', type=int, default=224)
     parser.add_argument('--prototype_shape', nargs='+', type=int, default=[2000, 192, 1, 1])
     parser.add_argument('--prototype_activation_function', type=str, default='log')
