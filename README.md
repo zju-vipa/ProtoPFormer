@@ -11,6 +11,7 @@ The overview of ProtoPFormer is as below:
 
 ## Updates
 
+* **09/27/2022** The supplementary material has been added in the Arxiv preprint.
 * **09/18/2022** Modify the default backbone to be `deit_tiny_patch16_224`.
 * **08/29/2022** The citation of our paper has been added.
 * **08/23/2022** Code has been uploaded.
