@@ -336,10 +336,12 @@ class PPNet(nn.Module):
 
     def push_forward(self, x):
         '''this method is needed for the pushing operation'''
-        conv_features = self.conv_features(x)
-        distances = self._l2_convolution_single(conv_features, self.prototype_vectors)
+        reserve_layer_nums = self.reserve_layer_nums
+        (cls_tokens, img_tokens), (token_attn, cls_token_attn, _) = self.prototype_distances(x, reserve_layer_nums)
+        global_activations, _ = self.get_activations(cls_tokens, self.prototype_vectors_global)
+        local_activations, (distances, proto_acts) = self.get_activations(img_tokens, self.prototype_vectors)
 
-        return conv_features, distances
+        return cls_token_attn, proto_acts
 
     def __repr__(self):
         # PPNet(self, features, img_size, prototype_shape,

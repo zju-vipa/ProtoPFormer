@@ -1,4 +1,5 @@
 __pycache__/
+.vscode/
 datasets/
 output_cosine/
 output_view/
