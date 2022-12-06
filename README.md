@@ -127,8 +127,8 @@ python eval_interpretability.py \
 
 The below table shows that ProtoPFormer significantly improves the interpretability score of ProtoPNet on vision transformers.
 
-| Method / Backbone | DeiT-Ti | DeiT-S | CaiT-XXS |
-| ---- | ---- | ---- | ---- | ---- |
+| Method & Backbone | DeiT-Ti | DeiT-S | CaiT-XXS |
+| :-----: | :-----: | :-----: | :-----: |
 | ProtoPNet | 3.75 | 0.05 | 42.55 |
 | ProtoPFormer | **82.65** | **31.30** | **71.45** |
 
